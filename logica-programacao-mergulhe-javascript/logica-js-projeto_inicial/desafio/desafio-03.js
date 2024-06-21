@@ -5,14 +5,14 @@ while (cont <= 10) {
     cont++
 }
 
-let cont = 10;
+cont = 10;
 
 while (cont >= 0) {
     alert(`contador: ${cont}`)
     cont--
 }
 
-let cont = parseInt(prompt("Qual número você quer começar a contagem regressiva?"));
+cont = parseInt(prompt("Qual número você quer começar a contagem regressiva?"));
 
 while (cont >= 0) {
     console.log(`contador: ${cont}`)
@@ -20,7 +20,7 @@ while (cont >= 0) {
 }
 
 
-let cont = 0;
+cont = 0;
 let finalNumber = parseInt(prompt("Até qual número você quer contar?"));
 
 while (cont <= finalNumber) {
