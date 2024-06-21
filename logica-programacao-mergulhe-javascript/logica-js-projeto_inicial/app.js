@@ -6,5 +6,9 @@ let userGuess = prompt("Escolha um número entre 1 e 30: ");
 if (userGuess == secretNumber) {
     alert(`Isso aí! Você descobriu o número secreto (${secretNumber})!`);
 } else {
-    alert("Você errou :(")              ;
+    if (userGuess > secretNumber) {
+        alert(`O número secreto é menor que ${userGuess}`);
+    } else {
+        alert(`O número secreto é maior que ${userGuess}`);
+    }
 }
