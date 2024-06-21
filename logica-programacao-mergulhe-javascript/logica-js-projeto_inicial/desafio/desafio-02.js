@@ -20,5 +20,8 @@ if (gamePoints >= 100) {
     alert(`Parabéns a pontuação ${gamePoints} é maior que 100! Você venceu!`);
 } else {
     alert(`Que pena a pontuação ${gamePoints} é menor que 100! Você perdeu =[`);
-} */
+} 
+
+let bankBalance = "R$15.000,00";
+alert(`Seu saldo bancário é ${bankBalance}`); */
 
