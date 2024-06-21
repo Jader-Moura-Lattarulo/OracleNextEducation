@@ -1,4 +1,4 @@
-/*let dayOfWeek = prompt("Que dia da semana é hoje?")
+let dayOfWeek = prompt("Que dia da semana é hoje?")
 
 if (dayOfWeek == "Sábado" || dayOfWeek == "Domingo"){
     alert("Bom fim de semana!");
@@ -23,5 +23,7 @@ if (gamePoints >= 100) {
 } 
 
 let bankBalance = "R$15.000,00";
-alert(`Seu saldo bancário é ${bankBalance}`); */
+alert(`Seu saldo bancário é ${bankBalance}`); 
 
+let userName = prompt("Qual é o seu nome?");
+alert(`Bem-vindo ${userName}!`);
