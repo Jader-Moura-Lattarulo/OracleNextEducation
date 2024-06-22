@@ -29,5 +29,21 @@ let idade = parseInt(prompt("Qual a sua idade? (apenas números)"));
 
 let maiorMenor = idade >= 18 ? "maior" : "menor";
 let anoAnos = idade == 1 ? "ano" : "anos";
-alert(`A maior idade no Brasil é considerada a partir dos 18 anos, portanto ${idade} ${anoAnos} é ${maiorMenor} de idade.`);*/
+alert(`A maior idade no Brasil é considerada a partir dos 18 anos, portanto ${idade} ${anoAnos} é ${maiorMenor} de idade.`);
+
+let numero = prompt("Insira um valor para descobrir se é positivo ou negativo:");
+
+if (numero > 0){
+    alert(`O número ${numero} é positivo.`)
+} else if (numero < 0) {
+    alert(`O número ${numero} é negativo.`)
+} else {
+    alert(`O número ${numero} é neutro.`)
+}
+
+let cont = 1;
+while(cont <= 10) {
+    console.log(cont);
+    cont++
+}*/
 
