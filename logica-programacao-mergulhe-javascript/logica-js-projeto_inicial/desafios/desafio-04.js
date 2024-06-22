@@ -1,4 +1,4 @@
-/* function welcomeMessage(){
+function welcomeMessage(){
     console.log("Bem-vindo ao nosso programa!");
 }
 
@@ -7,7 +7,7 @@ welcomeMessage();
 let nome = "Jader";
 console.log(`Bem-vindo ao nosso programa ${nome}!`);
 
-let nome = "Jader";
+nome = "Jader";
 alert(`Olá, ${nome}`);
 
 let linguagemProgramacao = prompt("Qual a linguagem de programação que você mais gosta?");
@@ -19,9 +19,9 @@ let resultado = valor1 + valor2;
 
 console.log(`A soma de ${valor1} e ${valor2} é igual a ${resultado}`);
 
-let valor1 = 5;
-let valor2 = 7;
-let resultado = valor1 - valor2;
+valor1 = 5;
+valor2 = 7;
+resultado = valor1 - valor2;
 
 console.log(`A subtração de ${valor1} e ${valor2} é igual a ${resultado}`);
 
@@ -34,17 +34,17 @@ alert(`A maior idade no Brasil é considerada a partir dos 18 anos, portanto ${i
 let numero = prompt("Insira um valor para descobrir se é positivo ou negativo:");
 
 if (numero > 0){
-    alert(`O número ${numero} é positivo.`)
+    alert(`O número ${numero} é positivo.`);
 } else if (numero < 0) {
-    alert(`O número ${numero} é negativo.`)
+    alert(`O número ${numero} é negativo.`);
 } else {
-    alert(`O número ${numero} é neutro.`)
+    alert(`O número ${numero} é neutro.`);
 }
 
 let cont = 1;
 while(cont <= 10) {
     console.log(cont);
-    cont++
+    cont++;
 }
 
 let nota = 10;
@@ -57,6 +57,11 @@ if (nota >= 7){
     console.log ("Reprovado");
 }
 
-randomNumber = Math.random()
-console.log(`${randomNumber}`)*/
+randomNumber = Math.random();
+console.log(`${randomNumber}`);
 
+randomNumber = Math.floor(Math.random() * 10 + 1);
+console.log(`${randomNumber}`);
+
+randomNumber = Math.floor(Math.random() * 1000 + 1);
+console.log(`${randomNumber}`);
