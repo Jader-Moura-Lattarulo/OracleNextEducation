@@ -1,5 +1,5 @@
 alert("Boas vindas ao jogo do número secreto");
-let secretNumber = 29;
+let secretNumber = Math.floor(Math.random()* 30)+1;
 let userGuess = null;
 let attempt = 1;
 
