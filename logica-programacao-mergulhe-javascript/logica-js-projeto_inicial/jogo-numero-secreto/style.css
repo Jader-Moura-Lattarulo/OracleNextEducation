@@ -71,6 +71,12 @@ body::before {
     color: #1875E8;
 }
 
+.voltar {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
 h1 {
     font-family: 'Chakra Petch', sans-serif;
     font-size: 72px;
