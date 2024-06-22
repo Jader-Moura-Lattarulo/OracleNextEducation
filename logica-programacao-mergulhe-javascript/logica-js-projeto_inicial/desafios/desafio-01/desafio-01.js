@@ -16,5 +16,7 @@ alert(mensagemDeErro);
  idade = Number(idade);
 
 if (idade >= 18) {
-    alert("Pode tirar a habilitação!")
+    alert("Pode tirar a habilitação!");
+} else {
+    alert("Não pode tirar a habilitação!")
 }
