@@ -20,8 +20,5 @@ while (userGuess != secretNumber){
     }
 }
 
-if (attempt == 1) {
-    alert(`Isso aí! Você descobriu o número secreto (${secretNumber}) com ${attempt} tentativa!`);
-} else {
-        alert(`Isso aí! Você descobriu o número secreto (${secretNumber}) com ${attempt} tentativas!`);
-}
+let wordAttempt = attempt == 1 ? "tentativa" : "tentativas";
+alert(`Isso aí! Você descobriu o número secreto (${secretNumber}) com ${attempt} ${wordAttempt}!`);
