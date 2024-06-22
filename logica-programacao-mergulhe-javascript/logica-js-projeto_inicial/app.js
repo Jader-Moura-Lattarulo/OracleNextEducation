@@ -1,11 +1,12 @@
 alert("Boas vindas ao jogo do número secreto");
-let secretNumber = Math.floor(Math.random()* 30)+1;
+const LimitNumber = 30;
+let secretNumber = Math.floor(Math.random()* LimitNumber)+1;
 let userGuess = null;
 let attempt = 1;
 
 //loop enquanto o chute não for igual ao número secreto
 while (userGuess != secretNumber){
-    userGuess = prompt("Escolha um número entre 1 e 30: ");
+    userGuess = prompt(`Escolha um número entre 1 e ${LimitNumber}: `);
     //se o chute for igual ao número secreto
     if (userGuess == secretNumber) {
         break;
