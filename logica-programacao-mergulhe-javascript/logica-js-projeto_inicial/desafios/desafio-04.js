@@ -49,10 +49,14 @@ while(cont <= 10) {
 
 let nota = 10;
 
-if (nota >= 6){
+if (nota >= 7){
     console.log ("Aprovado");
-} else if (nota < 6 && nota > 4) {
+} else if (nota < 7 && nota > 5) {
     console.log ("Recuperação");
 } else {
     console.log ("Reprovado");
-}*/
+}
+
+randomNumber = Math.random()
+console.log(`${randomNumber}`)*/
+
