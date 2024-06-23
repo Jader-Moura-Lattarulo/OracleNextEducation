@@ -5,5 +5,5 @@ titulo.innerHTML = "Jogo do Nº Secreto";
 paragrafo.innerHTML = "Escolha um nº entre 1 e 10";
 
 function checkKick(){
-
+    console.log("O botão foi clicado");
 }
