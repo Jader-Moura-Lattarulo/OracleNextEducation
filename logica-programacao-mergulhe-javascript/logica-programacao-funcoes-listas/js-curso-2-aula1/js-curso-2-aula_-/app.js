@@ -1,8 +1,10 @@
-let titulo = document.querySelector('h1');
-let paragrafo = document.querySelector('p');
+function showTextOnScren (tag, text){
+    let field = document.querySelector(tag);
+    field.innerHTML = text;
+}
 
-titulo.innerHTML = "Jogo do Nº Secreto";
-paragrafo.innerHTML = "Escolha um nº entre 1 e 10";
+showTextOnScren("h1", "Jogo do Nº Secreto");
+showTextOnScren("p", "Escolha um nº entre 1 e 10:");
 
 function checkKick(){
     console.log("O botão foi clicado");
