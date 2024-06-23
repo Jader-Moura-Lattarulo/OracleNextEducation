@@ -8,8 +8,9 @@ function showTextOnScren (tag, text){
 showTextOnScren("h1", "Jogo do Nº Secreto 2.0");
 showTextOnScren("p", "Escolha um nº entre 1 e 10:");
 
-function checkKick(){
-    console.log("O botão foi clicado");
+function checkGuess(){
+    let guess = document.querySelector("input").value;
+    console.log(guess == secretNumber);
 }
 
 function generateRandomNumber() {
