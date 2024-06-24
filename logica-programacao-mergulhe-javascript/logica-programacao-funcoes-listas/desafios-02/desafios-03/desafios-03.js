@@ -18,20 +18,12 @@ function doubleTheNumber(){
 }
 
 function whichIsBigger(){
-    let firstInput = document.querySelector("#get_first_number");
-    let firstNumber = firstInput.value;
 
-    let secoundInput = document.querySelector("#get_secound_number");
-    let secoundNumber = secoundInput.value;
+    let biggestNumber = Math.max(
+        parseFloat(document.querySelector("#get_first_number").value),
+        parseFloat(document.querySelector("#get_secound_number").value),
+        parseFloat(document.querySelector("#get_third_number").value)
+    );
 
-    let thirdInput = document.querySelector("#get_third_number");
-    let thirdNumber = thirdInput.value;
-
-    if (firstNumber > secoundNumber && firstNumber > thirdNumber) {
-        return alert(`o número ${firstNumber} é o maior número entre os três.`);
-    } else if (secoundNumber > firstNumber && secoundNumber > thirdNumber) {
-        return alert(`o número ${secoundNumber} é o maior número entre os três.`);
-    } else {
-        return alert(`o número ${thirdNumber} é o maior número entre os três.`);
-    }
+    return alert(`o número ${biggestNumber} é o maior número entre os três.`);
 }
