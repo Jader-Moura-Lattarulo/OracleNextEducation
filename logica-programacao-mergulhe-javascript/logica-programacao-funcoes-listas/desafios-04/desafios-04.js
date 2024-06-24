@@ -18,7 +18,7 @@ function bodyMassIndex(){
     let weight = parseFloat(document.querySelector("#get_weight").value);
     let height = parseFloat(document.querySelector("#get_height").value);
     
-    let bodyMassIndex = weight/Math.pow(height,2);
+    let bodyMassIndex = (weight/Math.pow(height,2)).toFixed(2);
     
     if (bodyMassIndex >= 18.51 && bodyMassIndex <= 24.99) {
         //normal
