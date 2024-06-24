@@ -5,9 +5,12 @@ function showTextOnScren (tag, text){
     let field = document.querySelector(tag);
     field.innerHTML = text;
 }
+function showInitialMsg() {
+    showTextOnScren("h1", "Jogo do Nº Secreto 2.0");
+    showTextOnScren("p", "Escolha um nº entre 1 e 10:");    
+}
 
-showTextOnScren("h1", "Jogo do Nº Secreto 2.0");
-showTextOnScren("p", "Escolha um nº entre 1 e 10:");
+showInitialMsg();
 
 function checkGuess(){
     let guess = document.querySelector("input").value;
@@ -37,4 +40,12 @@ function generateRandomNumber() {
 function cleanInput(){
     guess = document.querySelector("input");
     guess.value = "";
+}
+
+function restartGame() {
+    secretNumber = generateRandomNumber();
+    cleanInput();
+    attempts = 1;
+    showInitialMsg();
+    document.getElementById("restart").setAttribute("disabled",true);
 }
