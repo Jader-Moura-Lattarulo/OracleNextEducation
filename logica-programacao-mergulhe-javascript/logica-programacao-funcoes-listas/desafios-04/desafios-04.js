@@ -20,18 +20,14 @@ function bodyMassIndex(){
     
     let bodyMassIndex = weight/Math.pow(height,2);
     
-    if (bodyMassIndex <= 18.5) {
-        //baixo peso
-        showResultOnScreen("p",`Seu IMC está em ${bodyMassIndex} e é considerado baixo, procure um profissional da saúde para saber o melhor tratatemto.`);      
-    } else if (bodyMassIndex >= 18.51 && bodyMassIndex <= 24.99) {
+    if (bodyMassIndex >= 18.51 && bodyMassIndex <= 24.99) {
         //normal
-        showResultOnScreen("p",`Seu IMC está em ${bodyMassIndex}, e é considerado normal, não tem com o que se preocupar.`);
-    } else if (bodyMassIndex >= 25 && bodyMassIndex <= 29.99) {
-        //sobrepeso
-        showResultOnScreen("p",`Seu IMC está em ${bodyMassIndex} e é considerado sobrepeso, procure um profissional da saúde para saber o melhor tratatemto.`);
+        showResultOnScreen("p",`Seu IMC está em ${bodyMassIndex}, e é considerado normal, não tem com o que se preocupar.`);      
     } else {
-        //Obesidade
-        showResultOnScreen("p",`Seu IMC está em ${bodyMassIndex} e é considerado obesidade, procure um profissional da saúde para saber o melhor tratatemto.`);
+        //Baixo, Sobrepeso, Obesidade
+        let wordLowOverweightObesity = bodyMassIndex <= 18.5 ? "baixo" : bodyMassIndex >= 25 && bodyMassIndex <= 29.99 ? "sobrepeso" : "obesidade";
+        let msgLowOverweightObesity = `Seu IMC está em ${bodyMassIndex} e é considerado ${wordLowOverweightObesity}, procure um profissional da saúde para saber o melhor tratatemto.`;
+        showResultOnScreen("p", msgLowOverweightObesity);
     }
 }
 
