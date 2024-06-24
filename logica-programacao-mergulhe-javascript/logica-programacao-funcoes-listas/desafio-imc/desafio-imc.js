@@ -10,6 +10,7 @@ function showResultOnScreen (id, text){
 }
 function showInitialMsg(){
     showResultOnScreen("resultTxt", `Preencha os campos e clique em "Calcular" para verificar seu IMC.`);
+    showResultOnScreen("newCalculationTxt", ``);
 }
 
 showInitialMsg();
