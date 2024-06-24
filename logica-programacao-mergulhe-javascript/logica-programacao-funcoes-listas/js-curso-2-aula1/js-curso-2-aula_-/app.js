@@ -15,19 +15,26 @@ function checkGuess(){
     if ( guess == secretNumber){
         showTextOnScren("h1", "Parabéns!");
         let wordAttempt = attempts == 1 ? "tentativa" : "tentativas";
-        let msgAttempts = `Você descobriu o número secreto com ${attempts} ${wordAttempt}!`;
+        let msgAttempts = `Você descobriu o número secreto (${secretNumber}) com ${attempts} ${wordAttempt}!`;
         showTextOnScren("p",`${msgAttempts}`);
+        cleanInput();
+        document.getElementById("restart").removeAttribute("disabled");
     } else {
         showTextOnScren("h1", "Errou!");
-        if (guess > secretNumber) {
-            showTextOnScren("p",`O número secreto é menor do que ${guess}`);
-        } else {
-            showTextOnScren("p",`O número secreto é maior do que ${guess}`);
-        }
-        attempts++
+        let wordBiggerLower = guess > secretNumber ? "menor" : "maior";
+        let msgBiggerLower = `O número secreto é ${wordBiggerLower} do que ${guess}`;
+        showTextOnScren("p",`${msgBiggerLower}`);
+        
+        attempts++;
+        cleanInput();
     }
 }
 
 function generateRandomNumber() {
     return parseInt(Math.random() * 10 + 1);
+}
+
+function cleanInput(){
+    guess = document.querySelector("input");
+    guess.value = "";
 }
