@@ -1,4 +1,5 @@
 let secretNumber = generateRandomNumber();
+let attempts = 1;
 
 function showTextOnScren (tag, text){
     let field = document.querySelector(tag);
@@ -13,7 +14,9 @@ function checkGuess(){
     
     if ( guess == secretNumber){
         showTextOnScren("h1", "Parabéns!");
-        showTextOnScren("p","Você descobriu o número secreto!");
+        let wordAttempt = attempts == 1 ? "tentativa" : "tentativas";
+        let msgAttempts = `Você descobriu o número secreto com ${attempts} ${wordAttempt}!`;
+        showTextOnScren("p",`${msgAttempts}`);
     } else {
         showTextOnScren("h1", "Errou!");
         if (guess > secretNumber) {
@@ -21,6 +24,7 @@ function checkGuess(){
         } else {
             showTextOnScren("p",`O número secreto é maior do que ${guess}`);
         }
+        attempts++
     }
 }
 
