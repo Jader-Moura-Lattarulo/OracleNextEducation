@@ -10,7 +10,18 @@ showTextOnScren("p", "Escolha um nº entre 1 e 10:");
 
 function checkGuess(){
     let guess = document.querySelector("input").value;
-    console.log(guess == secretNumber);
+    
+    if ( guess == secretNumber){
+        showTextOnScren("h1", "Parabéns!");
+        showTextOnScren("p","Você descobriu o número secreto!");
+    } else {
+        showTextOnScren("h1", "Errou!");
+        if (guess > secretNumber) {
+            showTextOnScren("p",`O número secreto é menor do que ${guess}`);
+        } else {
+            showTextOnScren("p",`O número secreto é maior do que ${guess}`);
+        }
+    }
 }
 
 function generateRandomNumber() {
