@@ -1,13 +1,13 @@
 let secretNumber = generateRandomNumber();
 let attempts = 1;
 
-function showTextOnScren (tag, text){
+function showTextOnScreen (tag, text){
     let field = document.querySelector(tag);
     field.innerHTML = text;
 }
 function showInitialMsg() {
-    showTextOnScren("h1", "Jogo do Nº Secreto 2.0");
-    showTextOnScren("p", "Escolha um nº entre 1 e 10:");    
+    showTextOnScreen("h1", "Jogo do Nº Secreto 2.0");
+    showTextOnScreen("p", "Escolha um nº entre 1 e 10:");    
 }
 
 showInitialMsg();
@@ -16,17 +16,17 @@ function checkGuess(){
     let guess = document.querySelector("input").value;
     
     if ( guess == secretNumber){
-        showTextOnScren("h1", "Parabéns!");
+        showTextOnScreen("h1", "Parabéns!");
         let wordAttempt = attempts == 1 ? "tentativa" : "tentativas";
         let msgAttempts = `Você descobriu o número secreto (${secretNumber}) com ${attempts} ${wordAttempt}!`;
-        showTextOnScren("p",`${msgAttempts}`);
+        showTextOnScreen("p",`${msgAttempts}`);
         cleanInput();
         document.getElementById("restart").removeAttribute("disabled");
     } else {
-        showTextOnScren("h1", "Errou!");
+        showTextOnScreen("h1", "Errou!");
         let wordBiggerLower = guess > secretNumber ? "menor" : "maior";
         let msgBiggerLower = `O número secreto é ${wordBiggerLower} do que ${guess}`;
-        showTextOnScren("p",`${msgBiggerLower}`);
+        showTextOnScreen("p",`${msgBiggerLower}`);
         
         attempts++;
         cleanInput();
