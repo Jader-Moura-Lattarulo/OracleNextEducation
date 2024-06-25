@@ -4,6 +4,26 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Desafios 04</title>
+        <style>
+            table {
+                width: 50%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+            table,
+            th,
+            td {
+                border: 1px solid black;
+            }
+            th,
+            td {
+                padding: 10px;
+                text-align: center;
+            }
+            .operation {
+                padding: 0 5px;
+            }
+        </style>
     </head>
     <body>
         <h1>Desafios 04</h1>
@@ -78,12 +98,13 @@
             type="number"
             id="get_factor"
             class="container__input"
-            placeholder="Insira a tabuada que você quer"
+            placeholder="Fator multiplicador"
         />
         <button onclick="productMultiplicationTable()" class="container__botao">
             Calcular
         </button>
-        <p id="multiplicationTableResultTxt"></p>
+        <div id="multiplicationTableResultTxt"></div>
+        <br />
         <button onclick="resetMultiplicationTable()" class="container__botao">
             Reset
         </button>

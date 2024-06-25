@@ -68,5 +68,31 @@ function resetAreaAndPerimeter(){
 
 function productMultiplicationTable(){
     let factor = parseInt(document.getElementById("get_factor").value);
+    var productDiv = document.getElementById("multiplicationTableResultTxt");
     
+    productDiv.innerHTML = "";
+
+    if (isNaN(factor)) {
+        productDiv.innerHTML = 'Por favor, digite um número válido.';
+        return;
+    }
+
+    var table = document.createElement("table");
+    var header = table.insertRow();
+    header.insertCell(0).innerHTML = `<b>Fator</b>`;
+    header.insertCell(1).innerHTML = "";
+    header.insertCell(2).innerHTML = `<b>Multiplicador</b>`;
+    header.insertCell(3).innerHTML = "";
+    header.insertCell(4).innerHTML = `<b>Produto</b>`;
+
+    for (var i = 1; i <= 10; i++) {
+        var line = table.insertRow();
+        line.insertCell(0).innerHTML = factor;
+        line.insertCell(1).innerHTML = `<span class="operation">X</span>`;
+        line.insertCell(2).innerHTML = i;
+        line.insertCell(3).innerHTML = `<span class="operation">=</span>`;
+        line.insertCell(4).innerHTML = factor * i;
+    }
+
+    productDiv.appendChild(table);
 }
