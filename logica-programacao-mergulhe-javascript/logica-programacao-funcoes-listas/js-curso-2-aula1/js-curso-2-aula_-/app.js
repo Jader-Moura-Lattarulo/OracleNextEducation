@@ -6,9 +6,11 @@ let attempts = 1;
 function showTextOnScreen (tag, text){
     let field = document.querySelector(tag);
     field.innerHTML = text;
+    //responsiveVoice.speak(text,"Brazilian Portuguese Female", {rate:1.2});
 }
+
 function showInitialMsg() {
-    showTextOnScreen("h1", "Jogo do Nº Secreto 2.0");
+    showTextOnScreen("h1", "Jogo do Número Secreto 2.0");
     showTextOnScreen("p", "Escolha um nº entre 1 e 10:");    
 }
 
