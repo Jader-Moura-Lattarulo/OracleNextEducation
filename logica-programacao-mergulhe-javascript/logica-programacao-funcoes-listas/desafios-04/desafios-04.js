@@ -65,3 +65,8 @@ function resetAreaAndPerimeter(){
     radius.value = "";
     showTextOnScreen("areaAndPerimeterResultTxt","");
 }
+
+function productMultiplicationTable(){
+    let factor = parseInt(document.getElementById("get_factor").value);
+    
+}
