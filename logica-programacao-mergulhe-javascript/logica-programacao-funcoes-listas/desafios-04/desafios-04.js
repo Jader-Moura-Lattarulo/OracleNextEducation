@@ -66,10 +66,13 @@ function resetAreaAndPerimeter(){
     showTextOnScreen("areaAndPerimeterResultTxt","");
 }
 
+
+
+
 function productMultiplicationTable(){
     let factor = parseInt(document.getElementById("get_factor").value);
+
     var productDiv = document.getElementById("multiplicationTableResultTxt");
-    
     productDiv.innerHTML = "";
 
     if (isNaN(factor)) {
@@ -95,4 +98,11 @@ function productMultiplicationTable(){
     }
 
     productDiv.appendChild(table);
+}
+
+function resetMultiplicationTable(){
+    factor = document.getElementById("get_factor");
+    factor.value = "";
+    var productDiv = document.getElementById("multiplicationTableResultTxt");
+    productDiv.innerHTML = "";
 }
