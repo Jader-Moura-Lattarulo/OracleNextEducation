@@ -50,4 +50,18 @@ function resetPerimeter(){
     showTextOnScreen("perimeterResultTxt","");
 }
 
-/*O perímetro de um círculo de raio r é calculado por C=2⋅π⋅r. A área de um círculo de raio r é dada por A=π⋅r2 */
+/*O perímetro de um círculo de raio r é calculado por C=2⋅π⋅r.
+A área de um círculo de raio r é dada por A=π⋅r2 */
+
+function calculateAreaAndPerimeter(){
+    let radius = parseFloat(document.getElementById("get_radius").value);
+    let circlePerimeter = 2 * Math.PI * radius;
+    let circleArea = Math.PI * Math.pow(radius,2);
+    showTextOnScreen("areaAndPerimeterResultTxt", `O perimetro e a área de uma sala circular com o raio de ${(radius).toFixed(2)}m são respectivamente ${(circlePerimeter).toFixed(2)}m e ${(circleArea).toFixed(2)}m`)
+}
+
+function resetAreaAndPerimeter(){
+    radius = document.getElementById("get_radius");
+    radius.value = "";
+    showTextOnScreen("areaAndPerimeterResultTxt","");
+}
